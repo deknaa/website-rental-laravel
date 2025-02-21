@@ -26,8 +26,24 @@
                 </div>
                 <div>
                     <ul class="flex gap-7">
-                        <li><a href="#" class="hover:underline">Home</a></li>
-                        <li><a href="#" class="hover:underline">Products</a></li>
+                        <li>
+                            <a href="{{ route('dashboard.admin') }}" @if (Route::current()->getName() == 'dashboard.admin')
+                             class="underline hover:underline" 
+                             @else
+                             class="hover:underline"
+                             @endif>
+                             Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('vehicles.index') }}" @if (Route::current()->getName() == 'vehicles.index')
+                             class="underline hover:underline" 
+                             @else
+                             class="hover:underline"
+                             @endif>
+                             Products
+                            </a>
+                        </li>
                         <li><a href="#" class="hover:underline">Testimony</a></li>
                         <li><a href="#" class="hover:underline">Products</a></li>
                         <li><a href="#" class="hover:underline">About Us</a></li>

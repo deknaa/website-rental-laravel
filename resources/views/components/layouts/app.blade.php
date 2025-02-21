@@ -13,6 +13,7 @@
         <!-- Styles / Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@9.0.3"></script>
     </head>
     <body>
         @if(Route::currentRouteName() == 'auth.register' || Route::currentRouteName() == 'auth.login')
