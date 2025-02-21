@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ route('vehicles.index') }}" @if (Route::current()->getName() == 'vehicles.index')
+                            <a href="{{ route('vehicles.index') }}" @if (Route::currentRouteName() == 'vehicles.index')
                              class="underline hover:underline" 
                              @else
                              class="hover:underline"

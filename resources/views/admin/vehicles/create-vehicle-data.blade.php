@@ -4,11 +4,12 @@
         <p class="text-sm">Tambah data unit kendaraan</p>
         <form action="{{ route('vehicles.store') }}" method="POST" class="mt-5" enctype="multipart/form-data">
             @csrf
-            <div class="mb-3">
+            <div class="grid grid-cols-2 gap-2 ">
+            <div class="">
                 <label for="vehicle_name">Nama Kendaraan</label><br>
-                <input type="text" name="vehicle_name" id="vehicle_name" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="Nama Kendaraan..">
+                <input type="text" name="vehicle_name" id="vehicle_name" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="Nama Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="petrol">Bahan Bakar Kendaraan</label><br>
                 <select name="petrol" id="petrol" class="w-full p-2 text-white bg-green-500 border border-green-600 rounded-lg">
                     @foreach ($petrols as $petrol )
@@ -16,15 +17,15 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="plate">Plat Nomor</label><br>
-                <input type="text" name="plate" id="plate" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="Nama Kendaraan..">
+                <input type="text" name="plate" id="plate" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="Nama Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_color">Warna Kendaraan</label><br>
-                <input type="text" name="vehicle_color" id="vehicle_color" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="Nama Kendaraan..">
+                <input type="text" name="vehicle_color" id="vehicle_color" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="Nama Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_type">Tipe Kendaraan</label><br>
                 <select name="vehicle_type" id="vehicle_type" class="w-full p-2 text-white bg-green-500 border border-green-600 rounded-lg">
                     @foreach ($types as $type)
@@ -32,27 +33,27 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_seat">Jumlah Kursi Kendaraan</label><br>
-                <input type="number" name="vehicle_seat" id="vehicle_seat" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="Jumlah Kursi Kendaraan..">
+                <input type="number" name="vehicle_seat" id="vehicle_seat" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="Jumlah Kursi Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_price">Harga Sewa Kendaraan</label><br>
-                <input type="number" name="vehicle_price" id="vehicle_price" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="Harga Sewa Kendaraan..">
+                <input type="number" name="vehicle_price" id="vehicle_price" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="Harga Sewa Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_year">Tahun Kendaraan</label><br>
-                <input type="date" name="vehicle_year" id="vehicle_year" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg">
+                <input type="date" name="vehicle_year" id="vehicle_year" class="w-full p-2 border-2 border-green-600 rounded-lg">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_engine">Mesin Kendaraan</label><br>
-                <input type="text" name="vehicle_engine" id="vehicle_engine" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="CC Mesin Kendaraan..">
+                <input type="text" name="vehicle_engine" id="vehicle_engine" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="CC Mesin Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_doors">Jumlah Pintu Kendaraan</label><br>
-                <input type="text" name="vehicle_doors" id="vehicle_doors" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="Jumlah Pintu Kendaraan..">
+                <input type="text" name="vehicle_doors" id="vehicle_doors" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="Jumlah Pintu Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_transmision">Transmisi Kendaraan</label><br>
                 <select name="vehicle_transmision" id="vehicle_transmision" class="w-full p-2 text-white bg-green-500 border border-green-600 rounded-lg">
                     @foreach ($transmisions as $transmision)
@@ -60,11 +61,11 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_merk">Merk Kendaraan</label><br>
-                <input type="text" name="vehicle_merk" id="vehicle_merk" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" placeholder="Merk Kendaraan..">
+                <input type="text" name="vehicle_merk" id="vehicle_merk" class="w-full p-2 border-2 border-green-600 rounded-lg" placeholder="Merk Kendaraan..">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_status">Status Kendaraan</label><br>
                 <select name="vehicle_status" id="vehicle_status" class="w-full p-2 text-white bg-green-500 border border-green-600 rounded-lg">
                     @foreach ($status as $stats) 
@@ -72,11 +73,12 @@
                     @endforeach
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label for="vehicle_image">Gambar Kendaraan</label><br>
-                <input type="file" name="vehicle_image" id="vehicle_image" class="w-full p-2 mt-3 border-2 border-green-600 rounded-lg" accept="image/*">
+                <input type="file" name="vehicle_image" id="vehicle_image" class="w-full p-2 border-2 border-green-600 rounded-lg" accept="image/*">
             </div>
-            <button type="submit" class="w-full p-2 mb-5 text-white bg-green-600 rounded-lg hover:bg-green-700">Submit</button>
+        </div>
+            <button type="submit" class="w-full p-2 mt-5 mb-5 text-white bg-green-600 rounded-lg hover:bg-green-700">Submit</button>
         </form>
     </div>
 </x-layouts.app>
