@@ -115,6 +115,9 @@
                                     @method('DELETE')
                                     <button type="submit">Delete</button>
                                 </form>
+                                <a href="{{ route('vehicles.show', $vehicle->id) }}">
+                                    Details
+                                </a>
                             </td>
                         </tr>
                     @endforeach

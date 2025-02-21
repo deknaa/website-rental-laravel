@@ -80,9 +80,14 @@ class VehiclesController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Vehicles $vehicle)
     {
-        //
+        $petrols = ['pertalite', 'solar', 'pertamax', 'pertamax_turbo'];
+        $types = ['motor', 'mobil', 'truck'];
+        $transmisions = ['manual', 'automatic'];
+        $status = ['tersedia', 'disewa', 'maintenance', 'tidak_tersedia', 'sudah_dibooking'];
+
+        return view('admin.vehicles.details-vehicle-data', compact('vehicle', 'petrols', 'types', 'transmisions', 'status'));
     }
 
     /**
