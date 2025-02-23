@@ -8,12 +8,15 @@ use Illuminate\View\Component;
 
 class cards extends Component
 {
+    public $totals;
+    public $description;
     /**
      * Create a new component instance.
      */
-    public function __construct()
+    public function __construct($totals = 0, $description = "")
     {
-        //
+        $this->totals = $totals;
+        $this->description = $description;
     }
 
     /**
